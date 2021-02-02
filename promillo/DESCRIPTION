@@ -15,4 +15,5 @@ RoxygenNote: 7.1.1
 Imports: 
     checkmate, ggplot2
 Suggests: 
-    testthat
+    testthat,
+    covr
