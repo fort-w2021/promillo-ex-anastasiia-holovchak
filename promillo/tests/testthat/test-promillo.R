@@ -151,3 +151,17 @@ test_that("legal drinking age is checked", {
       drinks = c("massn" = 2))
   )
 })
+
+context("tell_me_how_drunk")
+test_that("expect object of class ggplot", {
+  expect_class(
+    show_me_how_drunk(
+      age = 39,
+      sex = "male",
+      height = 180,
+      weight = 85,
+      drinking_time = as.POSIXct(c("2016-10-03 18:00:00", "2016-10-03 22:00:00")),
+      drinks = c("massn" = 3, "schnaps" = 4)
+    ),
+    "ggplot")
+})
